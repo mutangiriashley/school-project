@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FoodBridge — Turn Food Waste into Community Meals</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">🌱 FoodBridge</div>
+    <button class="btn open-modal-btn" id="navCta">Join as Business</button>
+  </nav>
+
+  <!-- Hero & Search Section -->
+  <header class="hero">
+    <span class="badge">Solving Food Waste & Hunger Together</span>
+    <h1>Turn surplus food into local community meals.</h1>
+    <p>FoodBridge connects grocery stores, bakeries, and restaurants with nearby food pantries and neighbors to rescue quality meals before they go to landfills.</p>
+
+    <!-- Search Box with Interactive Dietary Filters -->
+    <div class="search-container">
+      <div class="location-box">
+        <input type="text" id="zipInput" placeholder="Enter Zip Code or City (e.g., 90210, Downtown)..." />
+        <button class="btn" id="searchBtn">Find Meals</button>
+      </div>
+
+      <div class="filter-label">Filter by Dietary Requirements</div>
+      <div class="dietary-filters" id="dietaryFilters">
+        <span class="filter-chip" data-filter="Vegan">🌱 Vegan</span>
+        <span class="filter-chip" data-filter="Vegetarian">🥗 Vegetarian</span>
+        <span class="filter-chip" data-filter="Halal">🌙 Halal</span>
+        <span class="filter-chip" data-filter="Kosher">✡️ Kosher</span>
+        <span class="filter-chip" data-filter="Gluten-Free">🌾 Gluten-Free</span>
+        <span class="filter-chip" data-filter="Dairy-Free">🥛 Dairy-Free</span>
+        <span class="filter-chip" data-filter="Nut-Free">🥜 Nut-Free</span>
+      </div>
+    </div>
+
+    <div class="hero-buttons">
+      <button class="btn btn-secondary open-modal-btn" id="partnerBtn">Register as a Food Donor</button>
+    </div>
+  </header>
+
+  <!-- Dynamic Search Results Section -->
+  <section class="results-section">
+    <div class="section-title">
+      <h2>Available Rescue Meals Nearby</h2>
+      <p id="resultsCount">Showing all active listings</p>
+    </div>
+    <div class="results-grid" id="resultsGrid">
+      <!-- Dynamic result cards render here via JS -->
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="card">
+      <div class="card-icon">⚡</div>
+      <h3>Real-Time Alerts</h3>
+      <p>Local businesses broadcast surplus food at closing time. Community centers and neighbors receive instant notifications to collect items.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🤝</div>
+      <h3>Volunteer Rescue Network</h3>
+      <p>Volunteer drivers receive automated routes to transport bulk perishables from supermarkets directly to shelter kitchens.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">📊</div>
+      <h3>Transparent Impact</h3>
+      <p>Donors track tax-deductible contributions and environmental savings while helping eliminate neighborhood food deserts.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 FoodBridge Initiative. Building sustainable, hunger-free communities.</p>
+  </footer>
+
+  <!-- Food Donor Registration Modal -->
+  <div class="modal-overlay" id="donorModal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-labelledby="modalTitle">
+      <button class="modal-close" id="closeModalBtn" aria-label="Close modal">&times;</button>
+      
+      <div class="modal-header">
+        <h2 id="modalTitle">Register as a Food Donor</h2>
+        <p>Join our network of food partners and redirect quality surplus food to families in need.</p>
+      </div>
+
+      <form id="donorForm">
+        <div class="form-group">
+          <label for="businessName">Business / Organization Name *</label>
+          <input type="text" id="businessName" placeholder="e.g., Sunrise Bakery & Cafe" required />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="businessType">Business Type *</label>
+            <select id="businessType" required>
+              <option value="" disabled selected>Select type...</option>
+              <option value="Restaurant">Restaurant / Cafe</option>
+              <option value="Grocery Store">Grocery Store / Supermarket</option>
+              <option value="Bakery">Bakery / Deli</option>
+              <option value="Catering">Catering / Hotel</option>
+              <option value="Farm">Farm / Producer</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="surplusEstimate">Est. Daily Surplus *</label>
+            <select id="surplusEstimate" required>
+              <option value="" disabled selected>Select volume...</option>
+              <option value="1-10 meals">1 - 10 meals/day</option>
+              <option value="10-30 meals">10 - 30 meals/day</option>
+              <option value="30-100 meals">30 - 100 meals/day</option>
+              <option value="100+ meals">100+ meals/day</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="contactName">Contact Person *</label>
+            <input type="text" id="contactName" placeholder="Full name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="contactEmail">Work Email *</label>
+            <input type="email" id="contactEmail" placeholder="name@business.com" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="businessAddress">Pickup Address & City *</label>
+          <input type="text" id="businessAddress" placeholder="e.g., 123 Main St, Downtown, 90210" required />
+        </div>
+
+        <button type="submit" class="btn modal-submit-btn">Complete Registration</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div class="toast" id="toast">Notification</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
