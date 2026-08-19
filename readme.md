@@ -1,4 +1,4 @@
-# 🌱 FoodBridge Zambia
+# 🌱 FoodBridge Zambia Landing Page
 
 > Connecting local markets, bakeries, restaurants, and farms in Zambia with community centers, shelters, and feeding initiatives to eliminate food waste and fight hunger.
 
