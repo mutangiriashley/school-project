@@ -8,13 +8,13 @@
 
 ---
 
-## 📌 Overview
+##  Overview
 
 **FoodBridge Zambia** is a lightweight, community-driven platform designed to redirect surplus perishable food before it goes to landfills. By bridging local food donors (supermarkets, commercial bakeries, farms, and restaurants) with community organizations across Zambia—including Lusaka, Ndola, Kitwe, and Livingstone—FoodBridge facilitates rapid food rescue.
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
 * **Interactive Food Donor Registration:** Modal dialog allowing Zambian businesses to quickly register their daily surplus volume, business type, and pickup location.
 * **Location-Based Search:** Filter active meal listings by town, compound, or zip code (e.g., *Lusaka Central, Woodlands, Kabwata, Ndola, Kitwe*).
@@ -24,7 +24,7 @@
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 * **Frontend:** HTML5, Vanilla JavaScript (ES6+)
 * **Styling:** CSS3 (Custom CSS variables, Flexbox, CSS Grid)
